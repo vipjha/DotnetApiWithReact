@@ -16,6 +16,7 @@ builder.Services.AddDbContext<StoreContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddCors();
 
 
 var app = builder.Build();
@@ -29,7 +30,7 @@ try
     context.Database.Migrate();
     DbInitializer.Initalizer(context);
 }
-catch (Exception ex)
+catch (Exception)
 {
     throw;
    // Logging CreateLogger(ex, "Problem in migrate data");
@@ -44,6 +45,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseCors(opt =>
+{
+    opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+});
 
 app.UseAuthorization();
 

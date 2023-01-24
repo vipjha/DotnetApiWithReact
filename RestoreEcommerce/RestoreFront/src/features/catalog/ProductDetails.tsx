@@ -2,16 +2,19 @@ import { Divider, Grid, Table, TableBody, TableCell, TableContainer, TableRow, T
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import agent from "../../app/api/agent";
 import { Product } from "../../app/models/product";
 
 export default function ProductDetails(){
     const{id} = useParams<{id:string}>();
+    //console.log(id,'sadgasg');
     const[product, setProduct]=useState<Product|null>(null);
     const[loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        axios.get(`https://localhost:7120/api/Products/${id}`)
-        .then(response=>setProduct(response.data))
+        agent.Catalog.details(parseInt(id??'{error}'))
+        //axios.get(`https://localhost:7120/api/Products/${id}`)
+        .then(response=>setProduct(response))
         .catch(error=>console.log(error))
         .finally(()=>setLoading(false));
     }, [id])
@@ -28,7 +31,7 @@ export default function ProductDetails(){
         <Grid item xs={6}>
             <Typography variant='h3'>{product.name}</Typography>
             <Divider sx={{mb:2}} />
-            <Typography variant='h5' color='secondary'>${(product.price/100)}.toFixed(2)</Typography>
+            <Typography variant='h5' color='secondary'>${(product.price/100).toFixed(2)}</Typography>
             <TableContainer>
                 <Table>
                     <TableBody>

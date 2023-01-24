@@ -55,7 +55,7 @@ export default function Header({darkMode, handleThemeChange}:Props){
             </List>
             <Box display='flex' alignItems='center'>
             <IconButton size='large' sx={{color:'inherit'}}>
-                    <Badge>
+                    <Badge >
                         <ShoppingCart />
                     </Badge>
             </IconButton>

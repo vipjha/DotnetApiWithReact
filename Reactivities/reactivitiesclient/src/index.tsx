@@ -1,17 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import 'semantic-ui-css/semantic.min.css';
 import './app/layout/styles.css';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 import { store, StoreContext } from './app/stores/store';
 
-ReactDOM.render(
+/* const root= ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <StoreContext.Provider value={store}>
     <App />
-  </StoreContext.Provider>,
-  document.getElementById('root')
-);
+  </StoreContext.Provider> 
+); */
+
+const rootElement = document.getElementById('root')
+
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <StoreContext.Provider value={store}>
+      <App />
+    </StoreContext.Provider> 
+  );
+} else {
+  console.error("Element with ID 'root' not found.");
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

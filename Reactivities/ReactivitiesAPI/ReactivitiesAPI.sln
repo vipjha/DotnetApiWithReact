@@ -5,11 +5,13 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{12A8C01B-D26B-498E-8650-7B620C3FD720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{35822B2C-6143-406A-9836-CE6449645F03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{35822B2C-6143-406A-9836-CE6449645F03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{D18F4A97-E936-46BE-A6F0-493FD40D2FFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{D18F4A97-E936-46BE-A6F0-493FD40D2FFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{CF072350-DE67-4397-B4CB-5A73E1AE5C94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{CF072350-DE67-4397-B4CB-5A73E1AE5C94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{2625615A-8576-485A-B048-153EF1AEF467}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CF072350-DE67-4397-B4CB-5A73E1AE5C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF072350-DE67-4397-B4CB-5A73E1AE5C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF072350-DE67-4397-B4CB-5A73E1AE5C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2625615A-8576-485A-B048-153EF1AEF467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2625615A-8576-485A-B048-153EF1AEF467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2625615A-8576-485A-B048-153EF1AEF467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2625615A-8576-485A-B048-153EF1AEF467}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

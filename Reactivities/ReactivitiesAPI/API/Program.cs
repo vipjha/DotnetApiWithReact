@@ -2,13 +2,18 @@ using API.Extensions;
 using API.Middleware;
 using Application.Activites;
 using Application.Core;
+using Application.Interfaces;
+using Application.Photos;
 using Domain;
 using FluentValidation.AspNetCore;
+using Infrastructure.Photos;
+using Infrastructure.Security;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -48,6 +53,11 @@ builder.Services.AddCors();
 builder.Services.AddMediatR(typeof(List.Handler).Assembly);
 
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+
+builder.Services.AddScoped<IUserAccessor, UserAccessor>();
+builder.Services.AddScoped<IPhotoAccessor, PhotoAccessor>();
+
+builder.Services.Configure<CloudinarySetting>(config.GetSection("Cloudinary"));
 
 var app = builder.Build();
 using var scope = app.Services.CreateScope();

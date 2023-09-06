@@ -199,3 +199,7 @@ E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bi
 E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\Infrastructure.dll
+E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\Infrastructure.pdb
+E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\CloudinaryDotNet.dll
+E:\FinleWorkToUploadOnGit\DotnetApiWithReact\Reactivities\ReactivitiesAPI\API\bin\Debug\net6.0\Newtonsoft.Json.dll
